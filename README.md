@@ -22,7 +22,7 @@ and method *another_test_method* that returns:
 Those methods are available on localhost:8080/.
 Your configuration (stored in config/config.js file) should look like this:
 
-'''javascript
+```javascript
 appName = "SomeName";
 rpcEndPoint = 'http://localhost:8080/';
 functions = {
@@ -38,7 +38,7 @@ functions = {
         }
 };
 startMethod='test_method';
-'''
+```
 
 
 
