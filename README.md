@@ -6,7 +6,7 @@ It's based on Twitter Bootstrap, jQuery, jsonTable and jsonrpc jQuery plugin.
 
 # How to use it?
 
-You only have to prepare an api method that returns a list of hashes, configure website properly and serve this project as static content.
+You only have to prepare an api method that returns a list of hashes, configure website properly and serve this project as static content from your app (to avoid CORS).
 Let's assume you've prepared a method *test_method* that returns:
 
 ```javascript
