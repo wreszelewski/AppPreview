@@ -10,15 +10,15 @@
 <script src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="config/config.js"></script>
 <script type="text/javascript">
-function displayTable(data,headers) {
+function displayTable(data,method_desc) {
     var options = {
         source: data,
         rowClass: "classy",
     };
     $(functionResult).empty();
     $(functionResult).jsonTable({
-        head: headers,
-        json: headers
+        head: method_desc['col_names'],
+        json: method_desc['headers']
     });
     console.log(data);
     $(functionResult).jsonTableUpdate(options);
@@ -31,7 +31,7 @@ function makeRequest(method) {
     $.jsonRPC.request(method, {
         params: [],
         success: function(result) {
-            displayTable(result['result'],functions[method]['headers']);
+            displayTable(result['result'],functions[method]);
         },
         error: function(result) {
             console.log(result);
