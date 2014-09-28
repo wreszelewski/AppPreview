@@ -4,14 +4,13 @@ functions = {
     'get_list' :
         {
             "tabName": 'List',
-            "headers": ['id', 'name'],
-            "col_names": ["Numer", "Nazwa"],
+            "jsonKeys": ['id', 'name'],
+            "colNames": ["Numer", "Nazwa"],
         },
     'get_another' :
         {
             "tabName": 'Another',
-            "headers": ['numer', 'nazwa'],
-            "col_names": ['Id', 'Value'],
+            "jsonKeys": ['numer', 'nazwa'],
         },
 };
 startMethod='get_list';

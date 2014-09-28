@@ -16,9 +16,15 @@ function displayTable(data,method_desc) {
         rowClass: "classy",
     };
     $(functionResult).empty();
+    var tableHeaders = [];
+    if ('colNames' in method_desc) {
+        tableHeaders = method_desc['colNames'];
+    } else {
+        tableHeaders = method_desc['jsonKeys'];
+    }
     $(functionResult).jsonTable({
-        head: method_desc['col_names'],
-        json: method_desc['headers']
+        head: tableHeaders,
+        json: method_desc['jsonKeys']
     });
     console.log(data);
     $(functionResult).jsonTableUpdate(options);
