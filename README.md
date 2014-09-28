@@ -23,21 +23,22 @@ Those methods are available on localhost:8080/.
 Your configuration (stored in config/config.js file) should look like this:
 
 ```javascript
-appName = "SomeName";
-rpcEndPoint = 'http://localhost:8080/';
-functions = {
-    'test_method' :
+appName = "SomeName";                       //application name, will be desplayed on navbar
+rpcEndPoint = 'http://localhost:8080/';     //rpc endpoint
+functions = {                               //rpc functions that can be called
+    'test_method' :                         //api method name
         {
-            "tabName": 'Test',
-            "headers": ['id', 'name'],
+            "tabName": 'Test',              //name of tab where result should be displayed
+            "jsonKeys": ['id', 'name'],     //keys of each dict that should be displayed
+            "colNames": ['Number', 'Name'], //optional: column name corresponding to each displayed key, default is a key name
         },
       'another_test_method':
         {
             "tabName": 'AnotherTest',
-            "headers": ['number', 'name'],
+            "jsonKeys": ['number', 'name'],
         }
 };
-startMethod='test_method';
+startMethod='test_method';                  //method that should be displayed first
 ```
 
 
