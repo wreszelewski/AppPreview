@@ -1,7 +1,7 @@
 AppPreview
 ==========
 
-It's a tool for creating tables basing on return value of some api call.
+It's tool for creating tables basing on return value of some api call.
 It's based on Twitter Bootstrap, jQuery, jsonTable and jsonrpc jQuery plugin.
 
 # How to use it?
